@@ -1,13 +1,15 @@
-def calculadora():
-    valor_mensal = float(input("Digite o valor mensal: "))
-    base_calculo = float(input("Digite a base do cálculo mensal: "))
-    meses = int(input("Digite o número de meses: "))
+function calcular() {
+    var valor_mensal = parseFloat(document.getElementById("valor_mensal").value);
+    var base_calculo = parseFloat(document.getElementById("base_calculo").value);
+    var meses = parseInt(document.getElementById("meses").value);
     
-    saldo_total = valor_mensal * meses * base_calculo
-    media_saldo = saldo_total / meses
+    var saldo_total = valor_mensal * meses * base_calculo;
+    var media_saldo = saldo_total / meses;
     
-    print("\nResultado:")
-    print(f"Saldo total ao final de {meses} meses: R${saldo_total:.2f}")
-    print(f"Média do saldo mensal: R${media_saldo:.2f}")
+    var resultadoDiv = document.getElementById("resultado");
+    resultadoDiv.innerHTML = `
+        <p>Saldo total ao final de ${meses} meses: R$${saldo_total.toFixed(2)}</p>
+        <p>Média do saldo mensal: R$${media_saldo.toFixed(2)}</p>
+    `;
+}
 
-calculadora()
