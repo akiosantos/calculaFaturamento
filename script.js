@@ -12,4 +12,3 @@ function calcular() {
         <p>Média do saldo mensal: R$${media_saldo.toFixed(2)}</p>
     `;
 }
-
